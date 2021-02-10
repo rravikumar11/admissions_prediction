@@ -192,6 +192,7 @@ y_hat_ensemble_select <- predict(ensemble_select_model_list, edu_test_select)
 RMSE_ensemble_select <- calc_RMSE(y_hat_ensemble_select, edu_test_select$y)
 rmse_table <- rbind(rmse_table, data.frame(model = "Ensemble (select)", rmse = RMSE_ensemble_select, tune = "--"))
 
+
 #Ensemble model (full predictors)
 ensemble_model_list <- caretList(y ~ ., data = edu_train, tuneList = list(
   rf = caretModelSpec(method = "rf", tuneGrid = data.frame(mtry = 110)),
@@ -200,3 +201,9 @@ ensemble_model_list <- caretList(y ~ ., data = edu_train, tuneList = list(
 y_hat_ensemble <- predict(ensemble_model_list, edu_test)
 RMSE_ensemble <- calc_RMSE(y_hat_ensemble, edu_test$y)
 rmse_table <- rbind(rmse_table, data.frame(model = "Ensemble", rmse = RMSE_ensemble_select, tune = "--"))
+
+
+#calculating final RMSE from validation set
+y_hat_final <- predict(train_rf, edu_validation)
+RMSE_final <- calc_RMSE(y_hat_final, edu_validation$y)
+kable(data.frame(RMSE = RMSE_final))
