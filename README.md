@@ -2,6 +2,8 @@
 
 Predictive model guessing the admissions percentage at a university given directory and financial aid information, with an RMSE of 10%. Part of the capstone for HarvardX's Data Science certification.
 
+Data sets can be found in the data folder, information on the variables contained within can be found in the dictionaries folder.
+
 This model uses the following key variables (among many others):
 
 **GRN4A22:** Average amount of grant and scholarship aid awarded, income level (30,001-48,000), 2017-18.  
@@ -26,5 +28,3 @@ This model uses the following key variables (among many others):
 **LOAN_P:** Percent of full-time first-time undergraduates awarded student loans.
 
 2018 data gathered from IPEDS here (under Survey Data): https://nces.ed.gov/ipeds/use-the-data
-
-Data sets can be found in the data folder, information on the variables contained within can be found in the dictionaries folder.
