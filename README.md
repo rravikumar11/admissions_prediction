@@ -26,3 +26,5 @@ This model uses the following key variables (among many others):
 **LOAN_P:** Percent of full-time first-time undergraduates awarded student loans.
 
 2018 data gathered from IPEDS here (under Survey Data): https://nces.ed.gov/ipeds/use-the-data
+
+Data sets can be found in the data folder, information on the variables contained within can be found in the dictionaries folder.
